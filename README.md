@@ -1,3 +1,19 @@
+# RNB API Data Description
+
+This notebook uses building data from the RNB (Référentiel National des Bâtiments) API, which provides detailed information about buildings in France. The data includes:
+* Unique building identifiers (`rnb_id`)
+* Geographical coordinates and shapes
+* Address details
+* External IDs from various sources
+* Status and activity flags
+* Associated plot information
+
+The API endpoint used in this notebook is:
+```
+https://rnb-api.beta.gouv.fr/api/alpha/buildings/?insee_code=33063&limit=100
+```
+This endpoint returns buildings for the INSEE code `33063` (Bordeaux), with a limit of 100 records per request. The API supports pagination for retrieving additional records.
+
 # How to Run This Notebook and Prerequisites
 
 This notebook ingests building data from the RNB API and stores it in MongoDB. To run it successfully, follow these steps:
@@ -30,3 +46,6 @@ pip install pyspark requests pydantic pymongo
 * For large data volumes, consider batching or pagination strategies.
 
 If you encounter issues, check package installation, network connectivity, and MongoDB access permissions.
+
+## Autors
+Developped by Christian MBIPBIPE FOUEMKEU and Omar BAYOUD
